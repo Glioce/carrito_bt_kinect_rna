@@ -44,3 +44,13 @@ https://naylampmechatronics.com/blog/24_configuracion-del-modulo-bluetooth-hc-05
 
 Arduino Pinout
 https://www.luisllamas.es/esquema-de-patillaje-de-arduino-pinout/
+
+Frameworks
+Caffe http://caffe.berkeleyvision.org  
+TensorFlow https://www.tensorflow.org  
+Torch http://torch.ch  
+Darknet (C & CUDA) https://pjreddie.com/darknet/  
+ONNX (exchange format) https://onnx.ai  
+
+TensorFlow Java en Processing ¿cómo se instala?
+http://www.magicandlove.com/blog/2017/04/14/tensorflow-in-processing/
