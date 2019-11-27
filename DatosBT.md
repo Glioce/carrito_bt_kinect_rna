@@ -1,6 +1,6 @@
-Datos BT ======================================================================
+# Datos de los módulos Bluetooth
 
-Esclavo -----------------------------------------------------------------------
+## Esclavo
 
 AT+NAME=E //esclavo
 
@@ -27,7 +27,7 @@ AT+ADDR? //dirección de este módulo
 
 AT+RESET
 
-Maestro -----------------------------------------------------------------------
+## Maestro
 
 AT+NAME=M //maestro
 
