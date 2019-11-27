@@ -3,9 +3,10 @@
   Noviembre 2019
 
   El módulo BT recibe instrucciones de un solo caracter
+  'a' avanza
+  'p' para
   'i' izquierda
   'd' derecha
-  'p' para
 
   Envia un mensaje cada segundo para indicar que la conexión sigue activa
 ************************************************************************/
@@ -32,22 +33,24 @@ SoftwareSerial bt(10, 11);
 
 uint32_t t_msj = 0; //momento de enviar mensaje
 uint32_t T = 1000; //intervalo entre mensajes
+char msj[] = {'O', 'W'}; //caracteres que se envian como mensaje
+uint8_t j = 0; //indice dentro del array anterior
 
 void setup() {
-  for (int i = 2; i <= 13; i++) pinMode(i, OUTPUT); //salidas
-  motor(PWM_BASE, 0, PWM_BASE, 0); //avanzar
-  
   Serial.begin(9600); //se usa hardware serial para depurar
   Serial.println("CARRITO BLUETOOTH"); //mensaje inicial
-  
   bt.begin(9600); //iniciar comunicación con módulo BT
+  
+  //for (int i = 2; i <= 9; i++) pinMode(i, OUTPUT); //salidas
+  motor(PWM_BASE, 0, PWM_BASE, 0); //avanzar
 }
 
 void loop() {
   if (millis() >= t_msj) {// momento de enviar mensaje
     t_msj += T; //esperar antes de enviar siguiente mensaje
-    bt.println("OwO"); //enviar mensaje por BT
-    Serial.println("OwO"); //opcional
+    bt.write(msj[j]); //enviar mensaje por BT
+    //Serial.write(msj[j]); //opcional
+    j = (j + 1) % 2; //incrementar indice
   }
 
   if (bt.available()) {// recibir comando
@@ -63,11 +66,13 @@ void loop() {
       case 'p': //parar
         motor(0, 0, 0, 0);
         break;
-      default: //avanzar
+      case 'a': //avanzar
         motor(PWM_BASE, 0, PWM_BASE, 0);
+        break;
     }
   }
 
-  if (Serial.available()) //opcional
+  if (Serial.available()) {//opcional
     bt.write(Serial.read());
+  }
 }
