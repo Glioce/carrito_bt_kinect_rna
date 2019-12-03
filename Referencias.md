@@ -16,7 +16,7 @@ Fast Neural Style - Los modelos que se descargan continen una dirección desde l
 Se intentó cargar una red creada con Keras usando Dnn.readNetFromTensorflow(), pero no pudo reconocer formato  
 http://www.magicandlove.com/blog/2018/08/27/neural-network-style-transfer-in-opencv-with-processing/
 
-FACE SWAP  
+Face swap  
 http://www.magicandlove.com/blog/2018/08/20/face-swap-example-in-opencv-with-processing-v-2/
 
 YOLO V3 - Error  
@@ -55,3 +55,9 @@ ONNX (exchange format) https://onnx.ai
 
 TensorFlow Java en Processing ¿cómo se instala?
 http://www.magicandlove.com/blog/2017/04/14/tensorflow-in-processing/
+
+Busca: simple ann number recognition  
+https://www.digitalocean.com/community/tutorials/how-to-build-a-neural-network-to-recognize-handwritten-digits-with-tensorflow  
+http://neuralnetworksanddeeplearning.com/chap1.html  
+https://medium.com/tebs-lab/how-to-classify-mnist-digits-with-different-neural-network-architectures-39c75a0f03e3  
+https://towardsdatascience.com/writing-your-first-neural-net-in-less-than-30-lines-of-code-with-keras-18e160a35502  
