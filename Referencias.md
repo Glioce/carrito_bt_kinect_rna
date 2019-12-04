@@ -52,12 +52,24 @@ TensorFlow https://www.tensorflow.org
 Torch http://torch.ch  
 Darknet (C & CUDA) https://pjreddie.com/darknet/  
 ONNX (exchange format) https://onnx.ai  
+https://github.com/opencv/opencv/wiki/Deep-Learning-in-OpenCV
 
 TensorFlow Java en Processing ¿cómo se instala?
 http://www.magicandlove.com/blog/2017/04/14/tensorflow-in-processing/
 
 Busca: simple ann number recognition  
+Diferentes ejemplos de reconocimiento de digitos (ejemplos en py)  
 https://www.digitalocean.com/community/tutorials/how-to-build-a-neural-network-to-recognize-handwritten-digits-with-tensorflow  
 http://neuralnetworksanddeeplearning.com/chap1.html  
 https://medium.com/tebs-lab/how-to-classify-mnist-digits-with-different-neural-network-architectures-39c75a0f03e3  
 https://towardsdatascience.com/writing-your-first-neural-net-in-less-than-30-lines-of-code-with-keras-18e160a35502  
+
+Un poco de info sobre redes Hopfield (ejemplos en py)  
+https://www.eriksmistad.no/hopfield-network/  
+https://github.com/unixpickle/hopfield/tree/master/examples  
+https://stackoverflow.com/questions/44395673/hopfield-network-in-keras  
+https://github.com/ccd97/hello_nn/tree/master/Hopfield-Network  
+https://keras.io/layers/recurrent/  
+
+Adaline  
+https://www.youtube.com/watch?v=sTFEvn1ekt0  
