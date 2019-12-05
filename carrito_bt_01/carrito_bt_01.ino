@@ -16,7 +16,10 @@
 #define MOTOR_B 5
 #define MOTOR_C 6
 #define MOTOR_D 9
-#define PWM_BASE 128
+#define PWM_RAPIDO_I 165
+#define PWM_RAPIDO_D 200
+#define PWM_LENTO_I 125
+#define PWM_LENTO_D 160
 
 void motor(uint8_t a, uint8_t b, uint8_t c, uint8_t d) {
   analogWrite(MOTOR_A, a);
@@ -42,7 +45,7 @@ void setup() {
   bt.begin(9600); //iniciar comunicación con módulo BT
   
   //for (int i = 2; i <= 9; i++) pinMode(i, OUTPUT); //salidas
-  motor(PWM_BASE, 0, PWM_BASE, 0); //avanzar
+  motor(0, 0, 0, 0); //reposo
 }
 
 void loop() {
@@ -58,16 +61,19 @@ void loop() {
     Serial.write(comando);
     switch (comando) {
       case 'i': //girar a la izquierda
-        motor(0, 0, PWM_BASE, 0);
+        motor(PWM_LENTO_I, 0, PWM_RAPIDO_D, 0);
         break;
       case 'd': //girar a la derecha
-        motor(PWM_BASE, 0, 0, 0);
+        motor(PWM_RAPIDO_I, 0, PWM_LENTO_D, 0);
         break;
       case 'p': //parar
         motor(0, 0, 0, 0);
         break;
       case 'a': //avanzar
-        motor(PWM_BASE, 0, PWM_BASE, 0);
+        motor(PWM_RAPIDO_I, 0, PWM_RAPIDO_D, 0);
+        break;
+      case 'r':
+        motor(0, PWM_RAPIDO_I, 0, PWM_RAPIDO_D);
         break;
     }
   }
