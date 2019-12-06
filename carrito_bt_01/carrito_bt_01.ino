@@ -52,7 +52,7 @@ void loop() {
   if (millis() >= t_msj) {// momento de enviar mensaje
     t_msj += T; //esperar antes de enviar siguiente mensaje
     bt.write(msj[j]); //enviar mensaje por BT
-    //Serial.write(msj[j]); //opcional
+    Serial.write(msj[j]); //opcional
     j = (j + 1) % 2; //incrementar indice
   }
 
@@ -73,7 +73,7 @@ void loop() {
         motor(PWM_RAPIDO_I, 0, PWM_RAPIDO_D, 0);
         break;
       case 'r':
-        motor(0, PWM_RAPIDO_I, 0, PWM_RAPIDO_D);
+        motor(0, PWM_RAPIDO_D, 0, PWM_RAPIDO_I); //volteado!
         break;
     }
   }

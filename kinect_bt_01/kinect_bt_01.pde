@@ -35,7 +35,7 @@ void setup() {
   bodies = new ArrayList<SkeletonData>();
 
   printArray(Serial.list()); //ver todos los puertos seriales disponibles
-  bt = new Serial(this, "COM14", 9600); //iniciar comunicación con módulo BT
+  bt = new Serial(this, "COM13", 9600); //iniciar comunicación con módulo BT
   //bt.write("AT+VERSION\r\n");
 }
 
