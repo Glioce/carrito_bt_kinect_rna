@@ -73,3 +73,6 @@ https://keras.io/layers/recurrent/
 
 Adaline  
 https://www.youtube.com/watch?v=sTFEvn1ekt0  
+
+Diferencias entre Perceptron, Adaline y Perceptron Multi-capa  
+https://sebastianraschka.com/faq/docs/diff-perceptron-adaline-neuralnet.html
